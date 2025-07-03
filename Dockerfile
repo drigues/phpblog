@@ -16,8 +16,11 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # ─── 4. Set workdir ──────────────────────────────────────────────────────────
 WORKDIR /var/www/html
 
-# ─── 5. Copy & install PHP deps ──────────────────────────────────────────────
+# 5. Copy in composer files and artisan/bootstrap so Composer’s scripts can run
 COPY composer.json composer.lock ./
+COPY artisan bootstrap/ ./ 
+
+# Now composer install can run post-autoload scripts without failing
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
 # 6. Copy & build front-end assets
