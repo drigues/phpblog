@@ -20,10 +20,14 @@ WORKDIR /var/www/html
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
-# ─── 6. Copy & build front-end ───────────────────────────────────────────────
+# 6. Copy & build front-end assets
 COPY package.json package-lock.json vite.config.js postcss.config.cjs tailwind.config.cjs ./
-COPY resources/js resources/css resources/views resources ─adjust paths as needed─
+COPY resources/js ./resources/js
+COPY resources/css ./resources/css
+COPY resources/views ./resources/views
+
 RUN npm ci && npm run build
+
 
 # ─── 7. Copy the rest of your app ────────────────────────────────────────────
 COPY . .
