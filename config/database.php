@@ -33,7 +33,7 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            'url' => env('DB_URL'),
+            'url' => env('postgresql://blog_db_6732_user:KfrKPbqlMgM3MHcCEGHPG7xaM0GN7PyU@dpg-d1j70i6r433s73fufurg-a/blog_db_6732'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
@@ -44,7 +44,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DB_URL'),
+            'url' => env('postgresql://blog_db_6732_user:KfrKPbqlMgM3MHcCEGHPG7xaM0GN7PyU@dpg-d1j70i6r433s73fufurg-a/blog_db_6732'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'laravel'),
@@ -64,7 +64,7 @@ return [
 
         'mariadb' => [
             'driver' => 'mariadb',
-            'url' => env('DB_URL'),
+            'url' => env('postgresql://blog_db_6732_user:KfrKPbqlMgM3MHcCEGHPG7xaM0GN7PyU@dpg-d1j70i6r433s73fufurg-a/blog_db_6732'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'laravel'),
@@ -84,7 +84,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DB_URL'),
+            'url' => env('postgresql://blog_db_6732_user:KfrKPbqlMgM3MHcCEGHPG7xaM0GN7PyU@dpg-d1j70i6r433s73fufurg-a/blog_db_6732'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'laravel'),
@@ -99,7 +99,7 @@ return [
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
-            'url' => env('DB_URL'),
+            'url' => env('postgresql://blog_db_6732_user:KfrKPbqlMgM3MHcCEGHPG7xaM0GN7PyU@dpg-d1j70i6r433s73fufurg-a/blog_db_6732'),
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '1433'),
             'database' => env('DB_DATABASE', 'laravel'),
