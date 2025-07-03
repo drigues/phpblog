@@ -1,5 +1,5 @@
 # 1. Use official PHP-FPM image
-FROM php:8.1-fpm
+FROM php:8.2-fpm
 
 # 2. Install system deps & PostgreSQL driver
 RUN apt-get update \
